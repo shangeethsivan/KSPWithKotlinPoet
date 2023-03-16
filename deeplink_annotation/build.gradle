@@ -1,0 +1,17 @@
+plugins {
+    id 'java-library'
+    id 'org.jetbrains.kotlin.jvm'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+// add the following the KSP module's build.gradle
+dependencies {
+
+    implementation "com.google.devtools.ksp:symbol-processing-api:1.8.10-1.0.9"
+    implementation "com.squareup:kotlinpoet-ksp:1.11.0"
+    implementation group: 'com.squareup', name: 'kotlinpoet', version: '1.12.0'
+}
